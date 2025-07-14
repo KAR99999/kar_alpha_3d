@@ -830,8 +830,8 @@
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING false        // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING false        // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
@@ -1321,9 +1321,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
+#define INVERT_X_DIR true
 #define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_Z_DIR true
 // #define INVERT_I_DIR false
 // #define INVERT_J_DIR false
 // #define INVERT_K_DIR false
@@ -1370,7 +1370,7 @@
 
 // The size of the printable area
 #define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+#define Y_BED_SIZE 150
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1723,8 +1723,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-// #define MANUAL_X_HOME_POS 0
-// #define MANUAL_Y_HOME_POS 0
+#define MANUAL_X_HOME_POS 0
+ #define MANUAL_Y_HOME_POS -70
 // #define MANUAL_Z_HOME_POS 0
 // #define MANUAL_I_HOME_POS 0
 // #define MANUAL_J_HOME_POS 0
@@ -1856,16 +1856,16 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
+#define PREHEAT_1_TEMP_HOTEND 220
 #define PREHEAT_1_TEMP_BED 70
 #define PREHEAT_1_TEMP_CHAMBER 35
-#define PREHEAT_1_FAN_SPEED 0 // Value from 0 to 255
+#define PREHEAT_1_FAN_SPEED 255 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
 #define PREHEAT_2_TEMP_BED 110
 #define PREHEAT_2_TEMP_CHAMBER 35
-#define PREHEAT_2_FAN_SPEED 0 // Value from 0 to 255
+#define PREHEAT_2_FAN_SPEED 255 // Value from 0 to 255
 
 /**
  * Nozzle Park
